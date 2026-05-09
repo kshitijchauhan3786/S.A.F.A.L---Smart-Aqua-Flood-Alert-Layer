@@ -9,9 +9,29 @@
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
         .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-        .img-container { position: relative; overflow: hidden; border-radius: 1rem; background: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 180px; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+        
+        /* Updated Image Containers to prevent cropping */
+        .img-container { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 1rem; 
+            background: #ffffff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 200px; 
+            border: 1px solid #e2e8f0; 
+            transition: all 0.3s ease;
+            padding: 8px; /* Added padding to give charts breathing room */
+        }
+        
         .img-container:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-color: #3b82f6; }
-        img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Object-contain ensures the whole graph is visible */
+        .chart-img { width: 100%; height: 100%; object-fit: contain; }
+        
+        /* Profile specific styling */
+        .profile-img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
         
         .tagline-gradient { 
             background: linear-gradient(90deg, #3b82f6, #10b981); 
@@ -77,8 +97,8 @@
         <div class="lg:col-span-1 space-y-8">
             <!-- Developer Card -->
             <div class="bg-white p-1 rounded-[2rem] shadow-sm border border-slate-200">
-                <div class="img-container h-80 rounded-[1.8rem] mb-4">
-                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/image_af2a5c.jpg" alt="Kshitij Chauhan" class="object-top" onerror="this.src='https://via.placeholder.com/400x600?text=Profile+Image+Not+Found'">
+                <div class="img-container h-80 rounded-[1.8rem] mb-4 !p-0">
+                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/image_af2a5c.jpg" alt="Kshitij Chauhan" class="profile-img" onerror="this.src='https://via.placeholder.com/400x600?text=Profile+Image+Not+Found'">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-6">
                         <div>
                             <p class="text-white text-lg font-bold">Kshitij Chauhan</p>
@@ -126,8 +146,8 @@
                     <h3 class="text-lg font-black tracking-tight">Conceptual Systems Logic</h3>
                     <span class="text-[9px] font-black bg-blue-100 text-blue-700 px-3 py-1 rounded-full">RESEARCH DOC</span>
                 </div>
-                <div class="img-container h-64 bg-slate-50">
-                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/architecture_diagram.png" class="object-contain" alt="Architecture Diagram" onerror="this.src='https://via.placeholder.com/800x400?text=Architecture+Diagram+Not+Found'">
+                <div class="img-container h-80 bg-white">
+                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/architecture_diagram.png" class="chart-img" alt="Architecture Diagram" onerror="this.src='https://via.placeholder.com/800x400?text=Architecture+Diagram+Not+Found'">
                 </div>
                 <p class="text-[11px] text-slate-400 mt-6 leading-relaxed italic">The conceptual framework transitions from weather ingestion to automated activation recommendations based on saturation probabilities.</p>
             </div>
@@ -137,16 +157,16 @@
                 <!-- Pred vs Actual -->
                 <div class="bg-white p-6 rounded-[2rem] border border-slate-200">
                     <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Model Validation</h3>
-                    <div class="img-container h-52 bg-white">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/prediction_vs_actual.png.png" class="object-contain" alt="Prediction Graph" onerror="this.src='https://via.placeholder.com/400x300?text=Prediction+Graph+Not+Found'">
+                    <div class="img-container h-64 bg-white">
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/prediction_vs_actual.png.png" class="chart-img" alt="Prediction Graph" onerror="this.src='https://via.placeholder.com/400x300?text=Prediction+Graph+Not+Found'">
                     </div>
                     <p class="text-[10px] text-slate-500 mt-4 leading-relaxed italic">Comparative analysis: Evaluated LSTM outputs against historical inundation events.</p>
                 </div>
                 <!-- Loss Curve -->
                 <div class="bg-white p-6 rounded-[2rem] border border-slate-200">
                     <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Training Metrics</h3>
-                    <div class="img-container h-52 bg-white">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/training_loss_curve.png.png" class="object-contain" alt="Loss Curve" onerror="this.src='https://via.placeholder.com/400x300?text=Loss+Curve+Not+Found'">
+                    <div class="img-container h-64 bg-white">
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/training_loss_curve.png.png" class="chart-img" alt="Loss Curve" onerror="this.src='https://via.placeholder.com/400x300?text=Loss+Curve+Not+Found'">
                     </div>
                     <p class="text-[10px] text-slate-500 mt-4 leading-relaxed italic">Convergence monitoring to ensure model stability across training epochs.</p>
                 </div>
@@ -155,8 +175,8 @@
             <!-- Detailed History -->
             <div class="bg-white p-8 rounded-[2rem] border border-slate-200">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Climatic Trend Study (1990-2022)</h3>
-                <div class="img-container h-64 bg-white">
-                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/rainfall_trend_analysis.png.png" class="object-contain" alt="Rainfall Trend" onerror="this.src='https://via.placeholder.com/800x400?text=Trend+Analysis+Not+Found'">
+                <div class="img-container h-80 bg-white">
+                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/rainfall_trend_analysis.png.png" class="chart-img" alt="Rainfall Trend" onerror="this.src='https://via.placeholder.com/800x400?text=Trend+Analysis+Not+Found'">
                 </div>
                 <p class="text-xs text-slate-500 mt-6 leading-relaxed">
                     By identifying a 14% increase in rainfall anomalies, the system demonstrates why "Static Infrastructure" is no longer sufficient and suggests a shift toward **Adaptive, Data-Driven Response** frameworks.
