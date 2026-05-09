@@ -10,7 +10,6 @@
         .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
         
-        /* Optimized Image Containers */
         .img-container { 
             position: relative; 
             overflow: hidden; 
@@ -31,24 +30,12 @@
             border-color: #3b82f6; 
         }
         
-        /* Sizing variants */
         .size-profile { height: 450px; } 
-        /* The Conceptual Pic size increased substantially */
         .size-hero-chart { height: 600px; padding: 32px; } 
         .size-grid-chart { height: 320px; padding: 16px; } 
         
-        .chart-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain; /* Prevents cropping, shows entire diagram */
-        }
-        
-        .profile-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            object-position: top center; 
-        }
+        .chart-img { width: 100%; height: 100%; object-fit: contain; }
+        .profile-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
         
         .tagline-gradient { 
             background: linear-gradient(90deg, #3b82f6, #10b981); 
@@ -74,14 +61,12 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-100">
 
-    <!-- Disclaimer Banner -->
     <div class="bg-amber-50 border-b border-amber-100 py-2 text-center">
         <p class="text-[10px] text-amber-700 font-bold uppercase tracking-widest">
             Research Simulation: Developed for Exploratory Engineering & Academic Purposes
         </p>
     </div>
 
-    <!-- Navigation Header -->
     <nav class="gradient-bg text-white p-6 shadow-xl sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
@@ -95,15 +80,21 @@
                     <p class="text-[10px] text-blue-400 font-bold uppercase tracking-widest mt-1">Predictive Research Prototype</p>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <span class="flex items-center gap-2 px-4 py-1.5 bg-white/5 rounded-full border border-white/10 text-xs font-semibold">
-                    <span class="w-2 h-2 bg-blue-400 rounded-full pulse"></span> Live Project Stream
+            <div class="hidden md:flex items-center gap-4">
+                <!-- External Link to your GitHub Pages site -->
+                <a href="https://kshitijchauhan3786.github.io/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/" target="_blank" class="flex items-center gap-2 px-5 py-2 bg-blue-600 hover:bg-blue-500 transition-colors rounded-full text-[11px] font-black uppercase tracking-widest shadow-lg">
+                    <span>Live Project</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+                <span class="flex items-center gap-2 px-4 py-1.5 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full pulse"></span> Active Phase
                 </span>
             </div>
         </div>
     </nav>
 
-    <!-- Impactful Hero Section -->
     <header class="relative max-w-7xl mx-auto px-6 pt-24 pb-20 text-center overflow-hidden">
         <div class="hero-glow"></div>
         <div class="inline-block px-5 py-2 bg-blue-50 text-blue-700 text-[11px] font-black uppercase tracking-[0.2em] rounded-full mb-8 border border-blue-100">
@@ -118,18 +109,15 @@
     </header>
 
     <main class="max-w-7xl mx-auto p-6 space-y-12">
-        
-        <!-- Top Row: Profile and Hero Concept Diagram -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <!-- Developer Column -->
             <div class="lg:col-span-4 space-y-10">
                 <div class="bg-white p-1 rounded-[3rem] shadow-sm border border-slate-200">
                     <div class="img-container size-profile rounded-[2.8rem] !p-0">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/MyImage.jpeg" alt="Kshitij Chauhan" class="profile-img" onerror="this.src='https://via.placeholder.com/400x600?text=Profile+Image+Not+Found'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent flex items-end p-10">
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/MyImage.jpg" alt="Kshitij Chauhan" class="profile-img">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent flex items-end p-10">
                             <div>
                                 <p class="text-white text-2xl font-bold tracking-tight">Kshitij Chauhan</p>
-                                <p class="text-blue-400 text-xs font-black uppercase tracking-[0.2em] mt-2">Systems Architect & ML Engineer</p>
+                                <p class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mt-2">Systems Architect & ML Engineer</p>
                             </div>
                         </div>
                     </div>
@@ -139,21 +127,12 @@
                     <h2 class="text-slate-500 text-[10px] font-black uppercase tracking-widest mb-8">Simulation Stats</h2>
                     <div class="space-y-6">
                         <div>
-                            <div class="flex justify-between mb-2 text-xs font-bold uppercase tracking-wider">
+                            <div class="flex justify-between mb-2 text-[10px] font-black uppercase tracking-widest">
                                 <span>LSTM Accuracy</span>
                                 <span class="text-blue-400">89.4%</span>
                             </div>
-                            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
+                            <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
                                 <div class="bg-blue-500 h-full rounded-full" style="width: 89.4%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2 text-xs font-bold uppercase tracking-wider text-slate-400">
-                                <span>Data Coverage</span>
-                                <span>32 Years</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-                                <div class="bg-slate-600 h-full rounded-full" style="width: 100%"></div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +140,6 @@
                 </div>
             </div>
 
-            <!-- Hero Concept Picture (Increased Size) -->
             <div class="lg:col-span-8">
                 <div class="bg-white p-10 rounded-[3rem] border border-slate-200 h-full flex flex-col">
                     <div class="flex justify-between items-center mb-10">
@@ -169,67 +147,42 @@
                             <h3 class="text-3xl font-black tracking-tight text-slate-900">Conceptual Systems Architecture</h3>
                             <p class="text-blue-600 text-[11px] font-black uppercase tracking-[0.2em] mt-2">Primary Research Visualization</p>
                         </div>
-                        <span class="hidden md:block text-[10px] font-black bg-blue-50 text-blue-700 px-4 py-2 rounded-full ring-1 ring-blue-100 uppercase">Fig 1.0: Process Flow</span>
                     </div>
-                    
                     <div class="img-container size-hero-chart flex-grow">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/architecture_diagram.png" class="chart-img" alt="Architecture Diagram" onerror="this.src='https://via.placeholder.com/1200x800?text=Architecture+Diagram+Not+Found'">
-                    </div>
-                    
-                    <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                        <p class="text-sm text-slate-600 leading-relaxed italic">
-                            <strong>Technical Insight:</strong> This high-resolution diagram outlines the transition from data ingestion (Precipitation/Humidity) to the LSTM-driven logic gates that recommend automated infrastructure state changes.
-                        </p>
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/architecture_diagram.png" class="chart-img" alt="Architecture Diagram">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Bottom Row: Validation and Trends -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <!-- Analysis Grid -->
             <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="bg-white p-8 rounded-[3rem] border border-slate-200">
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-6">Model Validation</h3>
                     <div class="img-container size-grid-chart">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/prediction_vs_actual.png" class="chart-img" alt="Prediction Graph" onerror="this.src='https://via.placeholder.com/400x300?text=Prediction+Graph+Not+Found'">
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/prediction_vs_actual.png" class="chart-img" alt="Prediction Graph">
                     </div>
-                    <p class="text-[10px] text-slate-500 mt-6 leading-relaxed">Predictive vs. Actual rainfall patterns observed during validation testing.</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-[3rem] border border-slate-200">
                     <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-6">Training Metrics</h3>
                     <div class="img-container size-grid-chart">
-                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/training_loss_curve.png" class="chart-img" alt="Loss Curve" onerror="this.src='https://via.placeholder.com/400x300?text=Loss+Curve+Not+Found'">
+                        <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/training_loss_curve.png" class="chart-img" alt="Loss Curve">
                     </div>
-                    <p class="text-[10px] text-slate-500 mt-6 leading-relaxed">Optimization of the model across 150 training epochs.</p>
                 </div>
             </div>
-
-            <!-- Trend Study -->
             <div class="bg-white p-8 rounded-[3rem] border border-slate-200 flex flex-col">
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">32-Year Rainfall Trend</h3>
-                    <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Trend Analysis</span>
-                </div>
+                <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-6">Rainfall Trend</h3>
                 <div class="img-container flex-grow min-h-[320px]">
-                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/rainfall_trend_analysis.png" class="chart-img" alt="Rainfall Trend" onerror="this.src='https://via.placeholder.com/800x450?text=Trend+Analysis+Not+Found'">
+                    <img src="https://raw.githubusercontent.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer/main/Graphs/rainfall_trend_analysis.png" class="chart-img" alt="Rainfall Trend">
                 </div>
-                <p class="text-[11px] text-slate-500 mt-6 italic">Visualizing climatic anomalies to justify automated response systems.</p>
             </div>
         </div>
     </main>
 
     <footer class="max-w-7xl mx-auto p-16 text-center text-slate-400 border-t border-slate-200 mt-20">
-        <div class="mb-6 flex justify-center gap-4">
-            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
-            <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-            <span class="w-1.5 h-1.5 bg-blue-200 rounded-full"></span>
-        </div>
-        <p class="text-xs font-black text-slate-900 uppercase tracking-[0.3em] mb-6">Engineering Research Portfolio</p>
+        <p class="text-xs font-black text-slate-900 uppercase tracking-[0.3em] mb-4">Engineering Research Portfolio</p>
         <p class="text-[10px] font-medium max-w-2xl mx-auto leading-relaxed uppercase tracking-tighter opacity-60">
-            S.A.F.A.L. is a student-led exploratory engineering study. 
-            Development by Kshitij Chauhan © 2024. All rights reserved.
+            S.A.F.A.L. Project by Kshitij Chauhan © 2024.
         </p>
     </footer>
 
