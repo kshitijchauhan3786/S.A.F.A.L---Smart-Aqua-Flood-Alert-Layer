@@ -10,8 +10,8 @@
         .gradient-bg { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
         .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-        .img-container { position: relative; overflow: hidden; border-radius: 0.75rem; background: #f8fafc; display: flex; align-items: center; justify-content: center; }
-        img { width: 100%; height: 100%; object-fit: contain; }
+        .img-container { position: relative; overflow: hidden; border-radius: 0.75rem; background: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 150px; }
+        img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-900 font-sans">
@@ -28,7 +28,7 @@
                 <h1 class="text-xl font-bold tracking-tight">S.A.F.A.L. <span class="font-light text-blue-300">Command Center</span></h1>
             </div>
             <div class="flex items-center gap-6 text-sm font-medium">
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Research Simulation</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Conceptual Prototype</span>
                 <span class="bg-slate-700 px-3 py-1 rounded">Region: Safdarjung, Delhi</span>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
                 <h2 class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-3">Pipeline Architecture</h2>
                 <div class="img-container h-48 bg-slate-900">
-                    <img src="Graphs/architecture_diagram.png" alt="S.A.F.A.L Architecture" onerror="this.src='https://placehold.co/400x300/1e293b/white?text=Architecture+Diagram'">
+                    <img src="architecture_diagram.png" alt="S.A.F.A.L Architecture" onerror="this.src='https://placehold.co/400x300/1e293b/white?text=Architecture+Missing'">
                 </div>
                 <p class="text-[10px] text-gray-400 mt-3 italic">Sequential data flow: IMD Ingestion to Model Logic.</p>
             </div>
@@ -69,9 +69,15 @@
             <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
                 <h3 class="text-blue-800 font-bold text-sm mb-2">Systems Insight</h3>
                 <p class="text-blue-700 text-xs leading-relaxed">
-                    The "Saturation Tipping Point" in Delhi was observed at ~150mm/week. Beyond this, response logic shifts from drainage management to automated pumping activation (Conceptual).
+                    The "Saturation Tipping Point" in Delhi was observed at ~150mm/week. Beyond this, response logic shifts from drainage management to automated pumping activation (Conceptual Integration).
                 </p>
             </div>
+            
+            <!-- GitHub Integration Button -->
+            <a href="https://github.com/kshitijchauhan3786/S.A.F.A.L---Smart-Aqua-Flood-Alert-Layer" target="_blank" class="block w-full bg-slate-800 hover:bg-slate-700 text-white text-center py-3 rounded-xl font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Explore GitHub Repository
+            </a>
         </div>
 
         <!-- Center/Right: Data Visualizations -->
@@ -86,7 +92,7 @@
                 </div>
                 
                 <div class="img-container h-72">
-                    <img src="Graphs/prediction_vs_actual.png" alt="Prediction vs Actual Rainfall" onerror="this.src='https://placehold.co/800x400/f8fafc/64748b?text=Prediction+vs+Actual+Graph'">
+                    <img src="prediction_vs_actual.png" alt="Prediction vs Actual Rainfall" onerror="this.src='https://placehold.co/800x400/f8fafc/64748b?text=Prediction+Graph+Missing'">
                 </div>
                 <p class="text-[10px] text-gray-400 mt-4 text-center italic">Observing the model's tracking accuracy during hydrological outliers in the test window.</p>
             </div>
@@ -97,7 +103,7 @@
                 <div class="bg-white p-4 rounded-xl border border-gray-100">
                     <h3 class="text-xs font-bold text-gray-400 uppercase mb-3">Historical Trend (Safdarjung)</h3>
                     <div class="img-container h-48">
-                        <img src="Graphs/rainfall_trend_analysis.png" alt="Rainfall Trends" onerror="this.src='https://placehold.co/400x300/f8fafc/64748b?text=Trend+Analysis'">
+                        <img src="rainfall_trend_analysis.png" alt="Rainfall Trends" onerror="this.src='https://placehold.co/400x300/f8fafc/64748b?text=Trend+Analysis+Missing'">
                     </div>
                     <p class="text-[9px] text-gray-500 mt-2">32-year precipitation longitudinal study identifying monsoon variability.</p>
                 </div>
@@ -106,7 +112,7 @@
                 <div class="bg-white p-4 rounded-xl border border-gray-100">
                     <h3 class="text-xs font-bold text-gray-400 uppercase mb-3">Model Convergence (Loss)</h3>
                     <div class="img-container h-48">
-                        <img src="Graphs/training_loss_curve.png" alt="Training Loss Curve" onerror="this.src='https://placehold.co/400x300/f8fafc/64748b?text=Loss+Curve'">
+                        <img src="training_loss_curve.png" alt="Training Loss Curve" onerror="this.src='https://placehold.co/400x300/f8fafc/64748b?text=Loss+Curve+Missing'">
                     </div>
                     <p class="text-[9px] text-gray-500 mt-2">Weighted loss optimization indicating model stability across 50 epochs.</p>
                 </div>
@@ -114,9 +120,10 @@
         </div>
     </main>
 
-    <footer class="max-w-7xl mx-auto p-6 text-center text-gray-400 text-xs border-t border-gray-100 mt-6 space-y-2">
+    <footer class="max-w-7xl mx-auto p-6 text-center text-gray-400 text-[10px] border-t border-gray-100 mt-6 space-y-2">
         <p>S.A.F.A.L | Exploratory Engineering Portfolio Project | Safdarjung Meteorological Dataset (1990–2022)</p>
-</footer>
+        <p class="italic">This project is an exploratory engineering study and conceptual prototype developed for academic and research-oriented purposes.</p>
+    </footer>
 
 </body>
 </html>
